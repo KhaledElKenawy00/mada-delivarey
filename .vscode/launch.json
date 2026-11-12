@@ -1,0 +1,48 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "مدار ديسكتوب — Demo (Windows)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_desktop.dart",
+      "deviceId": "windows"
+    },
+    {
+      "name": "مدار موبايل — Demo (Android)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_mobile.dart"
+    },
+    {
+      "name": "مدار ديسكتوب — Supabase",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_desktop.dart",
+      "deviceId": "windows",
+      "toolArgs": ["--dart-define-from-file=env.json"]
+    },
+    {
+      "name": "مدار موبايل — Supabase",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_mobile.dart",
+      "toolArgs": ["--dart-define-from-file=env.json"]
+    },
+    {
+      "name": "مدار ديسكتوب — Demo (Linux)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_desktop.dart",
+      "deviceId": "linux"
+    },
+    {
+      "name": "مدار ديسكتوب — Supabase (Linux)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_desktop.dart",
+      "deviceId": "linux",
+      "toolArgs": ["--dart-define-from-file=env.json"]
+    }
+  ]
+}

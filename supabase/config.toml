@@ -1,0 +1,7 @@
+# إعدادات Edge Functions (بتتقري مع: supabase functions deploy)
+[functions.activate-license]
+verify_jwt = false
+
+[functions.admin]
+# الفانكشن نفسها بتتأكد إن اللي بينادي سوبر أدمن
+verify_jwt = false

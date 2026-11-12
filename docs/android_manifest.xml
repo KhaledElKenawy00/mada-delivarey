@@ -1,0 +1,24 @@
+<!--
+  انسخ الأجزاء دي في android/app/src/main/AndroidManifest.xml
+  (بعد ما تشغّل flutter create . --platforms=android,windows)
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ① فوق <application> مباشرة -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application android:label="مدار" android:usesCleartextTraffic="false">
+        <!-- ② جوه <application> — خدمة التتبع في الخلفية (Android 14+) -->
+        <service
+            android:name="com.baseflow.geolocator.GeolocatorLocationService"
+            android:foregroundServiceType="location"
+            android:exported="false" />
+    </application>
+</manifest>
